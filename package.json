@@ -1,0 +1,20 @@
+{
+  "name": "timetable-api",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --config wrangler.toml --local",
+    "build": "tsc --noEmit",
+    "deploy": "wrangler deploy --config wrangler.toml --minify",
+    "cf-typegen": "wrangler types --config wrangler.toml --env-interface CloudflareBindings",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "hono": "^4.11.10"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260317.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18",
+    "wrangler": "^4.4.0"
+  }
+}
